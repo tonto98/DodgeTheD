@@ -46,6 +46,7 @@ func _on_request_completed(result, response_code, headers, body):
 
 func _on_SubmitButton_pressed():
 	if $NameInput.text != "":
+		persist_player_name($NameInput.text)
 		var parent = get_tree().get_root().get_node("Main")
 		print(parent.score)
 		print("Sending " + $NameInput.text + " ")
@@ -57,7 +58,14 @@ func _on_SubmitButton_pressed():
 		_make_post_request("https://us-central1-kviz-a185e.cloudfunctions.net/postHighscore", data, true)
 	proceed_to_main()
 
+func persist_player_name(content):
+	var file = File.new()
+	file.open("user://player_name.dat", File.WRITE)
+	file.store_string(content)
+	file.close()
+
 func proceed_to_main():
+	print("proceed to main")
 	$Title.hide()
 	$NameInput.hide()
 	$SubmitButton.hide()

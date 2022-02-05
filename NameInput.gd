@@ -1,4 +1,5 @@
 extends TextEdit
+signal inpu_enter
 
 export(int) var LIMIT = 15
 var current_text = ''
@@ -7,10 +8,22 @@ var cursor_column = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	var name = load_player_name()
+	text = name
 	grab_focus()
 
+func load_player_name():
+	var file = File.new()
+	file.open("user://player_name.dat", File.READ)
+	var content = file.get_as_text()
+	print("content " + content)
+	file.close()
+	return content
 
 func _on_NameInput_text_changed():
+	if("\n" in text):
+		text = text.replace("\n", "")
+		get_parent()._on_SubmitButton_pressed()
 	var new_text : String = text
 	if new_text.length() > LIMIT:
 		text = current_text
