@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/the_meg.mp3-fc15d38952c037cc7b536c83df220742.mp3str"
+
+[deps]
+
+source_file="res://art/the_meg.mp3"
+dest_files=[ "res://.import/the_meg.mp3-fc15d38952c037cc7b536c83df220742.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
