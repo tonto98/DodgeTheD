@@ -54,7 +54,7 @@ script = ExtResource( 5 )
 scale = Vector2( 0.0790956, 0.0781502 )
 frames = SubResource( 1 )
 animation = "panic"
-frame = 1
+frame = 2
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

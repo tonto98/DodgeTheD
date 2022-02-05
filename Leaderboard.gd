@@ -17,11 +17,14 @@ func _on_request_completed(result, response_code, headers, body):
 	$List.text = getFormattedList(scores)
 
 func getFormattedList(list):
-	var result = ""
+	var result = "#  SCORE PLAYER\n\n"
 	var i = 0
-	for item in list:
+	var topTen = list.slice(0, 9, 1, false)
+	for item in topTen:
 		i += 1
-		result += str(i) + ". " + str(item.score) + " " + item.name + "\n"
+		var rank = "%02d" % i
+		var score = "%03d" % int(item.score)
+		result += rank + ".  " + score + "   " + item.name + "\n"
 	return result
 
 

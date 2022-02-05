@@ -16,16 +16,16 @@ action = "start_game"
 [sub_resource type="ShortCut" id=4]
 shortcut = SubResource( 3 )
 
-[sub_resource type="DynamicFontData" id=1]
+[sub_resource type="DynamicFontData" id=8]
 font_path = "res://fonts/Xolonium-Regular.ttf"
 
 [sub_resource type="DynamicFont" id=6]
 size = 64
-font_data = SubResource( 1 )
+font_data = SubResource( 8 )
 
 [sub_resource type="DynamicFont" id=7]
-size = 50
-font_data = SubResource( 1 )
+size = 38
+font_data = SubResource( 8 )
 
 [node name="HUD" type="CanvasLayer"]
 script = ExtResource( 1 )
@@ -103,13 +103,12 @@ __meta__ = {
 }
 
 [node name="NameInput" type="TextEdit" parent="."]
-visible = false
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
 margin_left = 32.0
 margin_right = -32.0
-margin_bottom = 74.0
+margin_bottom = 60.0
 custom_fonts/font = SubResource( 7 )
 highlight_current_line = true
 script = ExtResource( 2 )
@@ -135,4 +134,5 @@ __meta__ = {
 [connection signal="pressed" from="StartButton" to="." method="_on_StartButton_pressed"]
 [connection signal="timeout" from="MessageTimer" to="." method="_on_MessageTimer_timeout"]
 [connection signal="pressed" from="LeaderboardButton" to="." method="_on_LeaderboardButton_pressed"]
+[connection signal="text_changed" from="NameInput" to="NameInput" method="_on_NameInput_text_changed"]
 [connection signal="pressed" from="SubmitButton" to="." method="_on_SubmitButton_pressed"]
