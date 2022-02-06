@@ -1,6 +1,7 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Leaderboard.gd" type="Script" id=1]
+[ext_resource path="res://art/dicks/crown.png" type="Texture" id=2]
 
 [sub_resource type="DynamicFontData" id=1]
 font_path = "res://fonts/Xolonium-Regular.ttf"
@@ -67,6 +68,26 @@ margin_right = 69.5
 margin_bottom = -27.0
 custom_fonts/font = SubResource( 3 )
 text = "BACK"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Dick1" type="TextureRect" parent="." groups=["leaderboard"]]
+margin_right = 40.0
+margin_bottom = 40.0
+rect_scale = Vector2( 0.0992246, 0.0992246 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Dick2" type="TextureRect" parent="." groups=["leaderboard"]]
+margin_left = 416.0
+margin_right = 1062.0
+margin_bottom = 1019.0
+rect_scale = Vector2( 0.0992246, 0.0992246 )
+texture = ExtResource( 2 )
+flip_h = true
 __meta__ = {
 "_edit_use_anchors_": false
 }

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/d2.png-2f74949e8161f71b38c6d27b7071753a.stex"
+path="res://.import/pink1.png-813bc85fa9a66b832ec3924433bf185c.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/dicks/d2.png"
-dest_files=[ "res://.import/d2.png-2f74949e8161f71b38c6d27b7071753a.stex" ]
+source_file="res://art/dicks/pink1.png"
+dest_files=[ "res://.import/pink1.png-813bc85fa9a66b832ec3924433bf185c.stex" ]
 
 [params]
 

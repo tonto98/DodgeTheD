@@ -75,15 +75,15 @@ wait_time = 2.0
 one_shot = true
 
 [node name="LeaderboardButton" type="Button" parent="." groups=["hud"]]
-anchor_left = 0.5
 anchor_top = 1.0
-anchor_right = 0.5
+anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = -125.0
-margin_top = -72.0
-margin_right = -34.0
-margin_bottom = -52.0
-rect_scale = Vector2( 2.8536, 2.31094 )
+margin_left = 65.0
+margin_top = -60.0
+margin_right = 23.0
+margin_bottom = 4.0
+rect_scale = Vector2( 0.810746, 0.656569 )
+custom_fonts/font = SubResource( 2 )
 text = "Leaderboard"
 __meta__ = {
 "_edit_use_anchors_": false

@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Main.gd" type="Script" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://art/game_over.mp3" type="AudioStream" id=6]
 [ext_resource path="res://ShakeCamera2D.gd" type="Script" id=7]
 [ext_resource path="res://Leaderboard.tscn" type="PackedScene" id=8]
+[ext_resource path="res://art/background.png" type="Texture" id=9]
 
 [sub_resource type="Curve2D" id=1]
 _data = {
@@ -18,10 +19,16 @@ _data = {
 script = ExtResource( 2 )
 mob_scene = ExtResource( 3 )
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="TextureRect" type="TextureRect" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-color = Color( 0.2, 0.215686, 0.227451, 1 )
+margin_left = -95.0
+margin_top = -106.0
+margin_right = 1045.0
+margin_bottom = 1334.0
+rect_scale = Vector2( 0.424731, 0.424731 )
+texture = ExtResource( 9 )
+stretch_mode = 2
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -32,7 +39,7 @@ __meta__ = {
 position = Vector2( 240, 450 )
 
 [node name="MobTimer" type="Timer" parent="."]
-wait_time = 0.5
+wait_time = 0.7
 
 [node name="ScoreTimer" type="Timer" parent="."]
 
